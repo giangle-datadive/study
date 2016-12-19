@@ -22,3 +22,10 @@ Route::get('/adapter', 'AdapterController@index');
 Route::get('/template', 'TemplateController@index');
 
 Route::get('/strategy', 'StrategyController@index');
+
+Route::group(['prefix' => 'react'], function () {
+    Route::get('bootstrap-component', 'React\BootstrapComponentController@index');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
