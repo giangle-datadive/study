@@ -78,7 +78,7 @@ class Main extends React.Component {
         return (
             <div className="site-wrapper-inner">
                 <div className="cover-container">
-                    <Header/>
+                    <Header />
                     <Content/>
                     <Footer/>
                 </div>

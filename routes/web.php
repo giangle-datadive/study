@@ -25,6 +25,11 @@ Route::get('/strategy', 'StrategyController@index');
 
 Route::group(['prefix' => 'react'], function () {
     Route::get('bootstrap-component', 'React\BootstrapComponentController@index');
+    Route::get('github-profile', 'React\GithubProfile@index');
+    Route::get('counter', 'React\ReduxController@counter');
+    Route::get('chat', 'React\ChatController@index');
+    Route::get('chat/messages', 'React\ChatController@getMessages');
+    Route::get('quiz', 'React\QuizController@index');
 });
 Auth::routes();
 

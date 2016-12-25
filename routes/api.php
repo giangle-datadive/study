@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+$api = app('Dingo\Api\Routing\Router');
+$api->version(['version' => 'v1','prefix'=>'api','protected' => false], function ($api) {
+    $api->post('auth/login', 'App\Http\Controllers\Api\AuthController@login');
+});

@@ -8,12 +8,12 @@
     <meta name="author" content="">
     <title>React bootstrap component</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/react/bootstrap/cover.css') }}" rel="stylesheet">
+    @stack('css')
 </head>
 
 <body>
 @yield('content')
-
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src="https://unpkg.com/react@15/dist/react.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
 @stack('js')

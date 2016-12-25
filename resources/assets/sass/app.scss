@@ -4,3 +4,39 @@
 
 // Bootstrap
 @import "library";
+
+.img-100 {
+  width: 100px;
+}
+.send-message {
+  margin-top: 15px;
+}
+#main {
+  .list-group {
+    .list-group-item {
+      border: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .send {
+    text-align: right;
+    border-radius: 15px;
+    margin-left: 150px;
+    span {
+      background-color: #2a62bc;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
+  }
+
+  .receive {
+    border-radius: 15px;
+    span {
+      background-color: #adadad;
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
+  }
+}

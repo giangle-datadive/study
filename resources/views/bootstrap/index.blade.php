@@ -1,4 +1,7 @@
 @extends('layouts.react')
+@push('css')
+<link href="{{ asset('css/react/bootstrap/cover.css') }}" rel="stylesheet">
+@endpush
 @section('content')
     <div id="main" class="site-wrapper">
 

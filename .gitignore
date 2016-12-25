@@ -5,6 +5,8 @@
 Homestead.json
 Homestead.yaml
 .env
-/public/css/react/
-/public/css/
+/public/css/*
 /public/js/
+/resources/assets/vendor/*
+/npm-debug.log
+/storage/*
