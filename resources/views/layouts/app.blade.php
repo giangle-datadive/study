@@ -80,6 +80,7 @@
     @yield('content')
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="/js/app.js"></script>
 <script src="https://unpkg.com/react@15/dist/react.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
 @stack('js')

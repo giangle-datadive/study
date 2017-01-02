@@ -12,8 +12,8 @@ const elixir = require('laravel-elixir');
  */
 
 elixir(mix => {
-    mix.sass('app.scss');
-    // mix.webpack('app.js');
+    // mix.sass('app.scss');
+    mix.webpack('app.js');
     // mix.rollup(
     //     './resources/assets/js/bootstrap/index.js',
     //     './public/js/bootstrap/index.js'
@@ -42,12 +42,16 @@ elixir(mix => {
     //     './resources/assets/js/contactlist/src/index.js',
     //     './public/js/contactlist/index.js'
     // );
-    // mix.webpack(
-    //     './resources/assets/js/boi/index.js',
-    //     './public/js/boi/index.js'
-    // );
     mix.webpack(
-        './resources/assets/js/sticky/index.js',
-        './public/js/sticky/index.js'
+        './resources/assets/js/boi/index.js',
+        './public/js/boi/index.js'
     );
+    // mix.webpack(
+    //     './resources/assets/js/sticky/index.js',
+    //     './public/js/sticky/index.js'
+    // );
+    // mix.webpack(
+    //     './resources/assets/js/infofinder/index.js',
+    //     './public/js/infofinder/index.js'
+    // );
 });

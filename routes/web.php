@@ -33,7 +33,10 @@ Route::group(['prefix' => 'react'], function () {
     Route::get('movie', 'React\MovieFindController@index');
     Route::get('contact', 'React\ContactListController@index');
     Route::get('sticky', 'React\StickyNoteController@index');
-    Route::get('boi', 'React\ContactListController@boi');
+    Route::get('info', 'React\InfoFinderController@index');
+
+    Route::get('boi', 'React\BoiController@index');
+    Route::post('boi-result', 'React\BoiController@result');
 });
 Auth::routes();
 

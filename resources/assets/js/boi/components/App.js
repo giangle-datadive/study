@@ -1,33 +1,36 @@
-import Info from "./Info";
-class App extends React.Component {
-    constructor() {
-        this.state = {
-            result: '',
-        }
-    }
+let Info = require("./Info");
+let Result = require('./Result');
+let AppActions = require('../actions/AppActions');
+let AppStores = require('../stores/AppStores');
+
+function getAppState() {
+    return AppStores.getAppState();
+}
+
+let App = React.createClass({
+    getInitialState(){
+        return getAppState();
+    },
 
     componentDidMount() {
+        AppStores.addChangeListener(this._onChange);
+    },
 
-    }
+    componentWillUnmount() {
+        AppStores.removeChangeListener(this._onChange);
+    },
 
-    viewForSelf() {
-
-    }
-
-    viewForFriend(){
-        let html = (
-            <div>
-
-            </div>
-        )
-    }
+    _onChange() {
+        this.setState(getAppState());
+    },
 
     render() {
         let content;
-        if(this.state.result) {
-            content = this.state.result;
-        }else{
-            content = <Info/>;
+        if (this.state.result) {
+            content = <Result data={this.state.result}/>;
+        } else {
+            content = <Info showForm={this.state.showForm}
+                            showBtnGroup={this.state.showBtnGroup}/>;
         }
         return (
             <div className="row">
@@ -35,6 +38,6 @@ class App extends React.Component {
             </div>
         )
     }
-}
+});
 
-export default App;
+module.exports = App;

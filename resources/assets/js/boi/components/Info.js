@@ -1,31 +1,32 @@
-import Form from "./Form";
-class Info extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            showForm: false,
-        }
-    }
+let AppActions = require('../actions/AppActions');
+let Form = require('./Form');
+
+let Info = React.createClass({
 
     showForm(event) {
         event.preventDefault();
-        this.setState({
-            showForm: true,
-        });
-    }
+        AppActions.showForm();
+    },
 
-    hideForm(event) {
-        event.preventDefault();
-        this.setState({
-            showForm: false,
-        });
-    }
+    viewYourSelf() {
+        
+    },
 
     render() {
         let form = '';
-        if (this.state.showForm) {
-            form = <Form hideForm={this.hideForm.bind(this)}/>;
+        if(this.props.showForm === true) {
+            form = <Form showForm={this.props.showForm}/>;
         }
+
+        let btnGroup = (
+            <div>
+                <button onClick={this.viewYourSelf} className="btn btn-success">Xem</button>
+                <button onClick={this.showForm} className="btn btn-secondary">Xem cho bạn</button>
+            </div>
+        );
+
+        if(this.props.showBtnGroup === false) btnGroup = '';
+
         return (
             <div className="col-md-8">
                 <div className="col-md-6">
@@ -36,10 +37,8 @@ class Info extends React.Component {
                     Đằng sau thành công hay thất bại của mỗi người đều có những nguyên nhân sâu xa. Vậy đâu là yếu tố xuyên
                     suốt
                     làm nên thành công trong cuộc đời của bạn?
-                    <div>
-                        <button className="btn btn-success">Xem</button>
-                        <button onClick={this.showForm.bind(this)} className="btn btn-secondary">Xem cho bạn</button>
-                    </div>
+
+                    {btnGroup}
                     <div>
                         {form}
                     </div>
@@ -47,6 +46,6 @@ class Info extends React.Component {
             </div>
         )
     }
-}
+});
 
-export default Info;
+module.exports = Info;
