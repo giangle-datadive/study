@@ -18,6 +18,6 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 $api = app('Dingo\Api\Routing\Router');
-$api->version(['version' => 'v1','prefix'=>'api','protected' => false], function ($api) {
+$api->version(['version' => 'v1','middleware' => 'api.auth', 'prefix'=>'api'], function ($api) {
     $api->post('auth/login', 'App\Http\Controllers\Api\AuthController@login');
 });

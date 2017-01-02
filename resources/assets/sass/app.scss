@@ -40,3 +40,16 @@
     }
   }
 }
+.note {
+  background-image: url("/images/note.png");
+  position: relative;
+  height: 250px;
+}
+
+.note p {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  font-weight: bold;
+  font-size: 18px;
+}

@@ -180,7 +180,6 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         Dingo\Api\Provider\LaravelServiceProvider::class,
-        Laravel\Passport\PassportServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
     ],
 

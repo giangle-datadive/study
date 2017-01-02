@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use Dingo\Api\Transformer\Adapter\Fractal;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 use Dingo\Api\Routing\Helpers;
 use JWTAuth;
-use League\Fractal\Manager;
+use App\Transformers\UserTransformer;
 
 class AuthController extends Controller
 {
@@ -16,6 +15,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        $user = app('Dingo\Api\Auth\Auth')->user();
         $credentials = [
             'email' => $request->email,
             'password' => $request->password,
@@ -26,7 +26,8 @@ class AuthController extends Controller
             $token = JWTAuth::fromUser($user);
             $user->token = $token;
 
-            return $this->response()->item($user, new Fractal(new Manager()));
+
+            return api_response(0, 'Success', $user);
         }else{
             abort(Response::HTTP_UNAUTHORIZED, trans('auth.failed'));
         }

@@ -30,6 +30,10 @@ Route::group(['prefix' => 'react'], function () {
     Route::get('chat', 'React\ChatController@index');
     Route::get('chat/messages', 'React\ChatController@getMessages');
     Route::get('quiz', 'React\QuizController@index');
+    Route::get('movie', 'React\MovieFindController@index');
+    Route::get('contact', 'React\ContactListController@index');
+    Route::get('sticky', 'React\StickyNoteController@index');
+    Route::get('boi', 'React\ContactListController@boi');
 });
 Auth::routes();
 

@@ -15,6 +15,8 @@
     "vue-loader": "^10.0.2"
   },
   "dependencies": {
+    "firebase": "^3.6.4",
+    "object-assign": "^4.1.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   }

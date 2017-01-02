@@ -1,0 +1,6 @@
+module.exports = {
+    ADD_NOTE: 'ADD_NOTE',
+    RECEIVE_NOTES: 'RECEIVE_NOTES',
+    ADD_NOTE_LOCAL: 'ADD_NOTE_LOCAL',
+    REMOVE_NOTE: 'REMOVE_NOTE',
+};

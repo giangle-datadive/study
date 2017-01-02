@@ -30,8 +30,24 @@ elixir(mix => {
     //     './resources/assets/js/chat/index.js',
     //     './public/js/chat/index.js'
     // );
+    // mix.webpack(
+    //     './resources/assets/js/quiz/index.js',
+    //     './public/js/quiz/index.js'
+    // );
+    // mix.webpack(
+    //     './resources/assets/js/moviefind/src/js/index.js',
+    //     './public/js/moviefind/index.js'
+    // );
+    // mix.webpack(
+    //     './resources/assets/js/contactlist/src/index.js',
+    //     './public/js/contactlist/index.js'
+    // );
+    // mix.webpack(
+    //     './resources/assets/js/boi/index.js',
+    //     './public/js/boi/index.js'
+    // );
     mix.webpack(
-        './resources/assets/js/quiz/index.js',
-        './public/js/quiz/index.js'
+        './resources/assets/js/sticky/index.js',
+        './public/js/sticky/index.js'
     );
 });
