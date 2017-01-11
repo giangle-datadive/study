@@ -9,7 +9,7 @@ let Info = React.createClass({
     },
 
     viewYourSelf() {
-        
+
     },
 
     render() {

@@ -15,13 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/decorator', 'DecoratorController@index');
-
-Route::get('/adapter', 'AdapterController@index');
-
-Route::get('/template', 'TemplateController@index');
-
-Route::get('/strategy', 'StrategyController@index');
+Route::group(['prefix' => 'design-pattern'], function () {
+    Route::get('/decorator', 'DesignPattern\DecoratorController@index');
+    Route::get('/adapter', 'AdapterController@index');
+    Route::get('/template', 'TemplateController@index');
+    Route::get('/strategy', 'StrategyController@index');
+});
 
 Route::group(['prefix' => 'react'], function () {
     Route::get('bootstrap-component', 'React\BootstrapComponentController@index');
@@ -36,6 +35,7 @@ Route::group(['prefix' => 'react'], function () {
     Route::get('info', 'React\InfoFinderController@index');
 
     Route::get('boi', 'React\BoiController@index');
+    Route::get('boi/image', 'React\BoiController@image');
     Route::post('boi-result', 'React\BoiController@result');
 });
 Auth::routes();

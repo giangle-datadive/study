@@ -22,4 +22,9 @@ class BoiController extends Controller
         ];
         return response()->json(compact('data'));
     }
+
+    public function image()
+    {
+        return view('image/index');
+    }
 }
