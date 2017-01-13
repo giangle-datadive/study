@@ -2,8 +2,8 @@
 /**
  * Created by IntelliJ IDEA.
  * User: Giang
- * Date: 12/13/2016
- * Time: 11:45 PM
+ * Date: 1/13/2017
+ * Time: 9:15 PM
  */
 
 namespace App\DesignPattern\Adapter;
@@ -11,20 +11,21 @@ namespace App\DesignPattern\Adapter;
 
 class eReaderAdapter implements BookInterface
 {
-    protected $reader;
 
-    public function __construct(eReaderInterface $reader)
+    protected $eReader;
+
+    public function __construct(eReaderInterface $eReader)
     {
-        $this->reader = $reader;
+        $this->eReader = $eReader;
     }
 
     public function open()
     {
-        $this->reader->turnOn();
+        return $this->eReader->turnOn();
     }
 
     public function nextPage()
     {
-        $this->reader->clickNextButton();
+        return $this->eReader->pressNext();
     }
 }

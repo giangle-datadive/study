@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'design-pattern'], function () {
     Route::get('/decorator', 'DesignPattern\DecoratorController@index');
-    Route::get('/adapter', 'AdapterController@index');
+    Route::get('/adapter', 'DesignPattern\AdapterController@index');
     Route::get('/template', 'TemplateController@index');
     Route::get('/strategy', 'StrategyController@index');
 });

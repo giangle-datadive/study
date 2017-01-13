@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\DesignPattern;
+
 
 use App\DesignPattern\Adapter\Book;
-use App\DesignPattern\Adapter\BookInterface;
 use App\DesignPattern\Adapter\eReaderAdapter;
+use App\DesignPattern\Adapter\Ipad;
 use App\DesignPattern\Adapter\Kindle;
-use App\DesignPattern\Adapter\KindleAdapter;
-use App\DesignPattern\Adapter\Nook;
 use App\DesignPattern\Adapter\Person;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdapterController extends Controller
 {
     public function index()
     {
-        (new Person())->read(new eReaderAdapter(new Nook()));
+        $person = new Person();
+        $person->read(new eReaderAdapter(new Ipad()));
     }
 }
