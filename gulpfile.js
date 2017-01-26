@@ -46,10 +46,10 @@ elixir(mix => {
     //     './resources/assets/js/boi/index.js',
     //     './public/js/boi/index.js'
     // );
-    mix.webpack(
-        './resources/assets/js/image/index.js',
-        './public/js/image/index.js'
-    );
+    // mix.webpack(
+    //     './resources/assets/js/image/index.js',
+    //     './public/js/image/index.js'
+    // );
     // mix.webpack(
     //     './resources/assets/js/sticky/index.js',
     //     './public/js/sticky/index.js'
@@ -58,4 +58,12 @@ elixir(mix => {
     //     './resources/assets/js/infofinder/index.js',
     //     './public/js/infofinder/index.js'
     // );
+    // mix.rollup(
+    //     './resources/assets/js/sockchat/index.js',
+    //     './public/js/sockchat/index.js'
+    // );
+    mix.rollup(
+        './resources/assets/js/flash-card/index.js',
+        './public/js/flash-card/index.js'
+    );
 });

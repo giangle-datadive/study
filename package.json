@@ -15,9 +15,11 @@
     "vue-loader": "^10.0.2"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "firebase": "^3.6.4",
     "object-assign": "^4.1.0",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "socket.io": "^1.7.2"
   }
 }

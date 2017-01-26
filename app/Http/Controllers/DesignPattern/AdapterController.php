@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers\DesignPattern;
 
-
-use App\DesignPattern\Adapter\Book;
 use App\DesignPattern\Adapter\eReaderAdapter;
 use App\DesignPattern\Adapter\Ipad;
-use App\DesignPattern\Adapter\Kindle;
 use App\DesignPattern\Adapter\Person;
 use App\Http\Controllers\Controller;
 

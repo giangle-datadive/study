@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'design-pattern'], function () {
     Route::get('/decorator', 'DesignPattern\DecoratorController@index');
-    Route::get('/adapter', 'DesignPattern\AdapterController@index');
+    Route::get('/adapter', 'DesignPattern\s@index');
     Route::get('/template', 'TemplateController@index');
     Route::get('/strategy', 'StrategyController@index');
 });
@@ -33,6 +33,8 @@ Route::group(['prefix' => 'react'], function () {
     Route::get('contact', 'React\ContactListController@index');
     Route::get('sticky', 'React\StickyNoteController@index');
     Route::get('info', 'React\InfoFinderController@index');
+    Route::get('sockchat', 'React\SockchatController@index');
+    Route::get('flash-card', 'React\FlashcardController@index');
 
     Route::get('boi', 'React\BoiController@index');
     Route::get('boi/image', 'React\BoiController@image');
