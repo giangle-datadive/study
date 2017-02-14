@@ -20,6 +20,7 @@ Route::group(['prefix' => 'design-pattern'], function () {
     Route::get('/adapter', 'DesignPattern\s@index');
     Route::get('/template', 'TemplateController@index');
     Route::get('/strategy', 'StrategyController@index');
+    Route::get('/chain', 'DesignPattern\Chain@index');
 });
 
 Route::group(['prefix' => 'react'], function () {
